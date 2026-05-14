@@ -56,48 +56,75 @@ h1, h3{
     padding:10px;
 }
 .hero-section{
-    text-align: center;
+    display :flex;
+    justify-content: space-evenly;
     border-radius:10px;
-    padding: 10px;
-    
+    padding: 10px;    
     background-color: #278099;
+    margin: 10px;
+}
+.bio{
+    background-color: #001946;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 10px;
+    padding: 10px;
+    margin:10px;
+}
+.bio-text{
+    width: 80%;
+    padding:10px;
+    color: #FFFFFF;
+    background-color: #001946;
+    
 }
 .core-skills{
-    
-    padding:10px;
-    border-radius: 10px;
-    background-color: #278099;
-    color: white;
-}
-.skill-container{
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
+    display:flex;
+    flex-direction: column;
+    width: 50%;    
+    padding:10px;    
     background-color: #001946;
-    padding: 0px 10px;
-    
+    color: white;
     border-radius: 10px;
+    padding: 10px;
+    margin:10px;
+}
+.profile-img{
+    width:calc(400px /1.25);
+    height:calc(350px /1.25);
+    border-radius: 50%;
+    border: 5px solid #EFC24F;    
+}
+
+.skill-list{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    height: 100%;
+    padding:10px;
+       
 }
 .skill{
-    background-color: #278099;
-    padding: 20px;
+    width:30%;
+    background-color: #001946;
+    padding: 10px;
+    margin:5px;
     border-radius: 10px;
-    width: 30%;
-    margin: 10px 0px;
 }
 .projects-summary{    
     padding: 10px;
     border-radius: 10px;
     background-color: #278099;
     color: white;
+    margin:10px;
 }
 .projects-container{
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
     background-color: #001946;
-    padding: 0px 10px;
-    margin: 0px 0px 10px 0px;
+    
     border-radius: 10px;
 }
 .project{
@@ -105,7 +132,7 @@ h1, h3{
     padding: 20px;
     border-radius: 10px;
     width: 30%;
-    margin: 10px 0px;
+    margin: 10px;
 }
 footer{
     background-color: #278099;
