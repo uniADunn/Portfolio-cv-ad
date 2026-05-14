@@ -52,7 +52,7 @@ h1, h3{
     text-align: center;
 }
 .main-content{
-    margin:20px 200px;
+    margin:20px 150px;
     padding:10px;
 }
 .hero-section{
@@ -116,14 +116,14 @@ h1, h3{
     border-radius: 10px;
 }
 .projects-summary{
-    display :inline-flex;
+    display :flex;
     justify-content: space-evenly;
     padding: 10px;
     border-radius: 10px;
     background-color: #278099;
     color: white;
     margin:10px;
-    width: 100%;
+    
     
 }
 .projects-container{
