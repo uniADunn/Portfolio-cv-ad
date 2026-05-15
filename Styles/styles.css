@@ -1,8 +1,10 @@
+/* Global styles */
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+/* body and element styles */
 body{
     background-color: #278099;
     display: flex;
@@ -45,10 +47,11 @@ a{
     text-decoration: none;
     color: white;    
 }
-h1{
+.main-content h1{
     color: white;
     text-align: center;
 }
+/*home page styles*/
 .main-content{
     background-color: #001946;
     margin:20px 150px;
@@ -65,8 +68,8 @@ h1{
 }
 .bio{
     background-color: #278099;
-    display: flex;
-    flex-direction: column;
+    display: inline-block;
+    width: 50%;
     align-items: center;
     border-radius: 10px;
     padding: 20px;
@@ -74,10 +77,14 @@ h1{
 }
 .bio-container{
     background-color: #278099;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
 }
 
 .bio-text{
-    display:flex;
+    display:inline-flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
@@ -95,7 +102,7 @@ h1{
 .skills-container{
     display:flex;
     flex-direction: column;
-    width: 50%;    
+    width: 60%;    
     padding:10px;    
     background-color: #278099;
     color: white;
@@ -141,7 +148,7 @@ h1{
     
 }
 .fa-linux{
-    background-color: #EFC24F;
+    background-color: #FFFFFF;
     color: #000000;
     
 }
@@ -229,6 +236,119 @@ h1{
     padding:10px 5px;
     margin:0px;
 }
+/* CV page styles */
+.cv-hero-section{
+    display: flex;
+    margin:10px 450px;
+    padding:10px;
+    border-radius: 10px;
+    background-color: #001946;
+}
+.cv-hero-section h1{
+    color: #FFFFFF;
+    text-align: center;
+}
+.cv-hero-container{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding:10px;
+    justify-content: space-evenly;
+    background-color: #278099;
+}
+.personal-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+.cv-hero-personal-info{
+    padding:10px 20px;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.small-profile-img{
+    width:250px;
+    height:150px;
+    border-radius: 50px;
+    border: 5px solid #EFC24F;
+    box-shadow: 0px 0px 15px #000000;
+    margin:10px;
+    ;
+}
+.cv-hero-personal-info{
+    align-self: center;
+}
+.cv-hero-personal-info h2, p{
+    padding:10px;
+    color: #FFFFFF;
+}
+.cv-education-section{
+    display:flex;
+    flex-direction: column;
+    margin:10px 450px;
+    padding:10px;
+    border-radius: 10px;
+    background-color: #001946;
+}
+.cv-education-section h2{
+    color: #FFFFFF;
+    text-align: left;
+    padding:10px;
+}
+.education-container{
+    display:flex;
+    flex-direction: column;    
+    padding:10px;
+    justify-content: space-evenly;
+    background-color: #278099;
+}
+.education-description{
+    background-color: #001946;
+    padding:10px;
+    border-radius: 10px;
+    
+}
+.education-description h3, p{
+    padding:10px;
+    color: #FFFFFF;
+
+}
+.grade-table-container{
+    background-color: #001946;
+    color: #FFFFFF;
+    width: 100%;
+    margin:10px 0px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 10px;
+    padding:10px;
+}
+.grade-table-container th, .grade-table-container td{
+    border: 3px solid #EFC24F;
+    padding: 10px;
+    text-align: left;
+    background-color: #001946;
+}
+.grade-table-title{
+    padding:10px;
+    text-align: center;
+    background-color: #001946;
+    border-radius: 10px;
+}
+.grade-table{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+table{
+    width:80%;
+}
+
+/* Footer styles */
 footer{
     background-color: #001946;
     text-align: center;
