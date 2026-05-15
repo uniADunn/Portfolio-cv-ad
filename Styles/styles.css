@@ -4,22 +4,19 @@
     box-sizing: border-box;
 }
 body{
-    background-color: #001946 ;
+    background-color: #278099;
     display: flex;
     flex-direction: column;
     height: 100vh;
-    
-    
 }
 header{    
-    background-color: #278099;
+    background-color: #001946;
 }
 nav{
-    margin: 0px 10%;
+    margin: 0px 150px;
     padding: 20px 0px 20px 0px;
     width:30%;
 }
-
 ul{
     list-style: none;
     display: flex;
@@ -27,93 +24,162 @@ ul{
     flex-direction: row;
     gap: 20px;
     padding:10px 0px;
+    margin:0px 20px;
 }
-
-li{
-    background-color: #001946;
-    padding:10px;
+.div-btn-nav{
+    display:inline-flex;
+    background-color: #278099;
     border-radius: 10px;
-    width: 30%;
-    text-align: center;
+    width:100%;
+    align-content: center;
+    padding:10px 20px;
 }
-li:hover{
+.div-btn-nav:hover{
     background-color: #EFC24F ;
-
+    cursor: pointer;
 }
-li:hover a{
+.div-btn-nav:hover a{
     color: #000000;
 }
 a{
     text-decoration: none;
     color: white;    
 }
-h1, h3{
+h1{
     color: white;
     text-align: center;
 }
 .main-content{
+    background-color: #001946;
     margin:20px 150px;
     padding:10px;
+    border-radius: 10px;
 }
 .hero-section{
     display :flex;
     justify-content: space-evenly;
     border-radius:10px;
-    padding: 10px;    
-    background-color: #278099;
-    margin: 10px;
+    padding: 5px;    
+    background-color: #001946;
+    margin: 5px;
 }
 .bio{
-    background-color: #001946;
+    background-color: #278099;
     display: flex;
     flex-direction: column;
     align-items: center;
     border-radius: 10px;
-    padding: 10px;
-    margin:10px;
+    padding: 20px;
+    margin:5px;
 }
+.bio-container{
+    background-color: #278099;
+}
+
 .bio-text{
-    width: 80%;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
     padding:10px;
-    color: #FFFFFF;
+    color:#FFFFFF;
     background-color: #001946;
-    
+    border-radius: 10px;
+    margin:10px;
+    border:#EFC24F 5px solid;
+}
+.bio-text p{
+    padding:10px;
+    margin-top: 5px;
 }
 .skills-container{
     display:flex;
     flex-direction: column;
     width: 50%;    
     padding:10px;    
-    background-color: #001946;
+    background-color: #278099;
     color: white;
     border-radius: 10px;
-    margin: 10px;
+    margin:5px;
 }
 .skills-container h2{
     padding:0px 5px;
     margin:0px 5px;
 }
 .profile-img{
-    width:calc(400px /1.25);
-    height:calc(350px /1.25);
-    border-radius: 50%;
-    border: 5px solid #EFC24F;    
+    width:550px;
+    height:350px;
+    border-radius: 50px;
+    border: 5px solid #EFC24F;
+    box-shadow: 0px 0px 15px #000000;    
 }
-
 .skill-list{
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
-    height: 100%;
-    
-       
+    height: 100%; 
 }
 .skill{
+    display:inline-flex;
+    flex-direction: column;
     width:30%;
-    background-color: #278099;
-    padding: 10px;
+    background-color: #001946;
+    padding: 5px;
     margin: 10px;
     border-radius: 10px;
+    border: #EFC24F 5px solid;
+    box-shadow: 0px 0px 15px #000000;
+}
+.skill-title{
+    text-align: center;
+    padding:5px;
+}
+.skill-icon{
+    border-radius: 10px;
+    padding: 10px 0px;
+    margin:10px 0px;
+    
+}
+.fa-linux{
+    background-color: #EFC24F;
+    color: #000000;
+    
+}
+.fa-python{
+    background-color:  #FFFFFF;
+    color: #306998;
+    
+}
+.fa-database{
+    background-color:  #FFFFFF;
+    color: #306998;
+   
+    
+}
+.fa-microchip{
+    background-color: #FFFFFF;
+    color: #4db409;
+    
+    
+}
+.fa-code{
+    background-color:  #FFFFFF;
+    color:#e08f1d;
+    ;
+    
+}
+.fa-git-alt{
+    background-color:  #FFFFFF;
+    color: #F1502F;
+    
+    
+}
+.skill-icon h3{
+    padding:10px;
+}
+.skill-text{
+    padding:10px;
+    text-align: center;
 }
 .projects-summary{
     display :flex;
@@ -123,8 +189,6 @@ h1, h3{
     background-color: #278099;
     color: white;
     margin:10px;
-    
-    
 }
 .projects-container{
     display: flex;
@@ -132,29 +196,29 @@ h1, h3{
     justify-content: space-evenly;
     height: 100%;
     padding:10px;
-    background-color: #001946;
+    
     border-radius: 10px;
     width:100%;
     margin:10px;
 }
 .projects-container h2{
     padding:0px 5px;
-    margin:0px 20px;
-
-    
+    margin:0px 10px;
 }
 .project-list{
     display:flex;
     flex-direction: row;
     justify-content: space-between;
-    padding: 10px;
-
+    padding: 0px;
 }
 .project{
-    background-color: #278099;
+    background-color: #001946;
     padding: 10px;
     border-radius: 10px;
     margin:10px;
+    border: #EFC24F 5px solid;
+    box-shadow: 0px 0px 15px #000000;
+        
 }
 .project img{
     width:100%;
@@ -166,13 +230,9 @@ h1, h3{
     margin:0px;
 }
 footer{
-    background-color: #278099;
+    background-color: #001946;
     text-align: center;
     padding: 20px;
     color:#ffffff;
     margin-top: auto;
-    
-    
-    
-
 }
