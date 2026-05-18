@@ -496,3 +496,148 @@ footer{
     color:#ffffff;
     margin-top: auto;
 }
+/* ── Print / Save as PDF ── */
+@page {
+    size: A4;
+    margin: 0mm;
+}
+
+@media print {
+    header,
+    footer,
+    .pdf-download-btn {
+        display: none !important;
+    }
+
+    /* body matches the navy containers — kills the teal gaps */
+    body {
+        background-color: #001946;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+    }
+
+    .main-content {
+        margin: 0;
+        padding: 2px;
+        border-radius: 0;
+    }
+
+    .cv-hero-section {
+        margin: 0;
+        padding: 2px;
+        gap: 0;
+    }
+
+    /* tighten every container's internal spacing */
+    .cv-hero-container,
+    .statement-container,
+    .education-container,
+    .work-exp-container {
+        margin: 4px 0;
+        padding: 6px;
+    }
+
+    .personal-container {
+        padding: 6px;
+    }
+
+    .personal-text-container {
+        padding: 6px;
+    }
+
+    .personal-text-container p {
+        padding: 4px;
+        font-size: 9pt;
+        line-height: 1.3;
+    }
+
+    /* stack education cards vertically */
+    .education-list {
+        flex-direction: column;
+        gap: 6px;
+        padding: 4px;
+    }
+
+    .education-description {
+        width: 100%;
+        padding: 6px;
+    }
+
+    /* condense table cells significantly */
+    .grade-table-container th,
+    .grade-table-container td {
+        padding: 3px 6px;
+        font-size: 8pt;
+    }
+
+    .grade-table {
+        padding: 4px;
+    }
+
+    .grade-table h3 {
+        padding: 2px 0;
+        font-size: 9pt;
+    }
+
+    /* tighten work experience */
+    .work-exp-list {
+        gap: 4px;
+        padding: 4px;
+    }
+
+    .work-exp-card {
+        margin: 4px 0;
+        padding: 6px;
+    }
+
+    .title-content {
+        gap: 10px;
+    }
+
+    .role, .company, .duration {
+        padding: 4px;
+    }
+
+    .work-exp-card h2 {
+        font-size: 10pt;
+        padding: 4px;
+    }
+
+    .work-exp-card h4,
+    .work-exp-card h5 {
+        font-size: 9pt;
+        padding: 3px;
+    }
+
+    /* stack work bullets single column */
+    .work-ul {
+        flex-direction: column;
+        padding-left: 20px;
+    }
+
+    .work-ul li {
+        width: 100%;
+        padding: 2px 0;
+        margin: 1px;
+        font-size: 9pt;
+    }
+
+    /* avoid splits mid-card */
+    .education-description,
+    .work-exp-card,
+    .statement-container,
+    .cv-hero-container {
+        page-break-inside: avoid;
+        break-inside: avoid;
+    }
+
+    .cv-hero-personal-info a {
+        color: #EFC24F !important;
+    }
+
+    /* small profile image */
+    .small-profile-img {
+        width: 120px;
+        height: 80px;
+    }
+}
