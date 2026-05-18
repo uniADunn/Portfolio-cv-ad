@@ -4,6 +4,7 @@
     padding: 0;
     box-sizing: border-box;
 }
+
 /* body and element styles */
 body{
     background-color: #278099;
@@ -310,7 +311,9 @@ a{
     color: #EFC24F;
 }
 
-.statement-container{    
+.statement-container{
+    display: inline-flex;
+    flex-direction: column;  
     background-color: #278099;
     padding:10px;
     border-radius: 10px;
@@ -321,11 +324,13 @@ a{
 .statement-skills-wrapper{
     display: flex;
 }
-.personal-text-container{
+.personal-text-container{    
+    display: inline-flex;
     flex-direction: column;
-    background-color: #278099;    
+    background-color: #278099;
     padding:10px;
     width:50%;
+    height: 100%;
 }
 .personal-statement{
     padding:10px;
@@ -334,12 +339,15 @@ a{
     border-radius: 10px;
     border: 5px solid #EFC24F;
     box-shadow: 0px 0px 15px #000000;
+    line-height: 1.5;
+    
+    
+        
 }
 .skills-container-cv{
     display:flex;
     flex-direction: column;
     width: 100%;    
-       
     background-color: #278099;
     color: white;
     border-radius: 10px;
@@ -353,7 +361,8 @@ a{
     display: flex;
     gap: 10px;
     height: 100%;
-    justify-content: space-between; 
+    justify-content: space-between;
+    line-height: 1.5; 
 }
 .fa-android{
     background-color: #FFFFFF;
