@@ -13,6 +13,8 @@ body{
 }
 header{    
     background-color: #001946;
+    position: sticky;
+    top: 0;
 }
 nav{
     margin: 0px 150px;
@@ -255,17 +257,50 @@ a{
     padding:10px;
     justify-content: space-evenly;
     background-color: #278099;
+    border-radius: 10px;
 }
 .personal-container{
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
+    background-color: #001946;
+    padding:10px;
+    border-radius: 10px;
 }
 .cv-hero-personal-info{
     padding:10px 20px;
     display: flex;
     flex-direction: column;
-    
+}
+.cv-hero-personal-info a{
+    color: #EFC24F;
+    text-decoration: underline;
+}
+.cv-hero-personal-info a:hover{
+    color: #FFFFFF;
+}
+.personal-statement-section{
+    background-color: #001946;
+    padding:10px;
+    border-radius: 10px;
+    margin:10px 450px;
+}
+.statement-container{
+    background-color: #278099;
+    padding:10px;
+    border-radius: 10px;
+    color:#FFFFFF;
+}
+.statement-container h2{
+    padding:10px;
+    color: #FFFFFF;
+}
+.personal-text-container{
+    display:flex;
+    flex-direction: column;
+    background-color: #001946;
+    padding:10px;
+    border-radius: 10px;
 }
 
 .small-profile-img{
@@ -297,55 +332,69 @@ a{
     text-align: left;
     padding:10px;
 }
-.education-container{
-    display:flex;
-    flex-direction: column;    
+.education-container{    
     padding:10px;
-    justify-content: space-evenly;
     background-color: #278099;
+    border-radius: 10px;
+}
+.education-list{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    gap: 10px;
+    padding:10px;
 }
 .education-description{
+    display: inline-flex;
+    flex-direction: column;
     background-color: #001946;
-    padding:10px;
+    padding: 10px;
     border-radius: 10px;
+    border: 5px solid #EFC24F;
+    width: 50%;
     
 }
-.education-description h3, p{
-    padding:10px;
+.education-description h3, .education-description h2{
+    padding: 10px 0px 10px 10px;
     color: #FFFFFF;
 
 }
 .grade-table-container{
+    display: inline-flex;
+    
     background-color: #001946;
     color: #FFFFFF;
     width: 100%;
-    margin:10px 0px;
+    
+    
     display: flex;
     justify-content: center;
     flex-direction: column;
     border-radius: 10px;
-    padding:10px;
 }
 .grade-table-container th, .grade-table-container td{
-    border: 3px solid #EFC24F;
+    border: 2px solid #FFFFFF;
     padding: 10px;
     text-align: left;
     background-color: #001946;
 }
-.grade-table-title{
-    padding:10px;
-    text-align: center;
-    background-color: #001946;
-    border-radius: 10px;
-}
 .grade-table{
     display:flex;
+    flex-direction: column;
     justify-content: center;
-    align-items: center;
     width: 100%;
+    padding:10px;
+}
+.grade-table h3{
+    display: flex;
+    justify-content: center;
+    padding:5px 0px 5px 0px;
+    color: #FFFFFF;
 }
 table{
-    width:80%;
+    width: 100%;
+    
+    border-collapse: collapse;
 }
 
 /* Footer styles */
