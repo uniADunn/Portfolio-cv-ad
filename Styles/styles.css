@@ -274,10 +274,13 @@ a{
     text-align: center;
 }
 .cv-hero-container{
-    display: flex;
-    flex-direction: column;    
+    display: inline-flex;
+    
+    align-items: center;
+    flex-direction: column;
+        
     padding:10px;
-    justify-content: space-evenly;
+        
     background-color: #278099;
     border-radius: 10px;
     margin:10px 0px;
@@ -286,10 +289,13 @@ a{
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
+    width: 80%;
+    align-items: center;
     background-color: #001946;
     padding:10px;
     border-radius: 10px;
     border: 5px solid #EFC24F;
+    ;
 }
 .cv-hero-personal-info{
     padding:10px 20px;
@@ -358,12 +364,15 @@ a{
     width:350px;
     height:250px;
     border-radius: 50px;
-    border: 5px solid #000000;
-    box-shadow: 0px 0px 15px #000000;
+    border: 5px solid #278099;
+    box-shadow: 0px 0px 15px #278099;
     margin:10px;
 }
 .cv-hero-personal-info{
     align-self: center;
+    border:5px solid #EFC24F;
+    border-radius: 10px;
+    box-shadow: 0px 0px 15px #000000;
 }
 .cv-hero-personal-info h2, p{
     padding:10px;
@@ -526,7 +535,7 @@ footer{
 /* ── Print / Save as PDF ── */
 @page {
     size: A4;
-    margin: 8mm 12mm;
+    margin: 0mm;
 }
 
 @media print {
@@ -575,6 +584,14 @@ footer{
     .cv-hero-personal-info h2 {
         font-size: 11pt;
         padding: 4px;
+    }
+
+    .cv-hero-personal-info {
+        font-size: 9pt;
+        padding: 2px 4px;
+        border: 2px solid #EFC24F;
+        box-shadow: none;
+        
     }
 
     .cv-hero-personal-info p {
@@ -648,7 +665,7 @@ footer{
         flex-direction: column;
         justify-content: center;
         padding: 4px;
-        margin: 0;
+        margin: 4px 0px;
         border: 3px solid #EFC24F;
         box-shadow: none;
         border-radius: 6px;
