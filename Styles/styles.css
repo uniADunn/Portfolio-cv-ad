@@ -303,40 +303,64 @@ a{
 .cv-hero-personal-info a:hover{
     color: #EFC24F;
 }
-.personal-statement-section{
-    background-color: #001946;
-    padding:10px;
-    border-radius: 10px;
-    margin:10px 450px;
-}
-.statement-container{
+
+.statement-container{    
     background-color: #278099;
     padding:10px;
     border-radius: 10px;
     color:#FFFFFF;
     margin: 10px 0px;
 }
-.statement-container h2{
-    padding:10px;
-    color: #FFFFFF;
+
+.statement-skills-wrapper{
+    display: flex;
 }
 .personal-text-container{
-    display:flex;
     flex-direction: column;
-    background-color: #001946;
+    background-color: #278099;    
     padding:10px;
+    width:50%;
+}
+.personal-statement{
+    padding:10px;
+    color:#FFFFFF;
+    background-color: #001946;
     border-radius: 10px;
     border: 5px solid #EFC24F;
+    box-shadow: 0px 0px 15px #000000;
+}
+.skills-container-cv{
+    display:flex;
+    flex-direction: column;
+    width: 100%;    
+       
+    background-color: #278099;
+    color: white;
+    border-radius: 10px;
+    
+}
+.skills-container-cv h2{
+    padding:0px 5px;
+    margin:0px 5px;
+}
+.skill-list-cv{
+    display: flex;
+    gap: 10px;
+    height: 100%;
+    justify-content: space-between; 
+}
+.fa-android{
+    background-color: #FFFFFF;
+    color: #3DDC84;
 }
 
 .small-profile-img{
-    width:250px;
-    height:150px;
+    width:350px;
+    height:250px;
     border-radius: 50px;
     border: 5px solid #000000;
     box-shadow: 0px 0px 15px #000000;
     margin:10px;
-    ;
 }
 .cv-hero-personal-info{
     align-self: center;
@@ -380,6 +404,7 @@ a{
     border-radius: 10px;
     border: 5px solid #EFC24F;
     width: 50%;
+    box-shadow: 0px 0px 15px #000000;
     
 }
 .education-description h3, .education-description h2{
@@ -456,6 +481,7 @@ table{
     border-radius: 10px;
     border: 5px solid #EFC24F;
     margin:10px 0px;
+    box-shadow: 0px 0px 15px #000000;
 }
 .title-content{
     display: flex;
@@ -495,27 +521,30 @@ footer{
     padding: 20px;
     color:#ffffff;
     margin-top: auto;
+    border-top: 5px solid #EFC24F;
 }
 /* ── Print / Save as PDF ── */
 @page {
     size: A4;
-    margin: 0mm;
+    margin: 8mm 12mm;
 }
 
 @media print {
+    /* ── hide UI chrome ── */
     header,
     footer,
     .pdf-download-btn {
         display: none !important;
     }
 
-    /* body matches the navy containers — kills the teal gaps */
+    /* ── kill the teal gaps ── */
     body {
         background-color: #001946;
         -webkit-print-color-adjust: exact;
         print-color-adjust: exact;
     }
 
+    /* ── main wrapper ── */
     .main-content {
         margin: 0;
         padding: 2px;
@@ -528,11 +557,8 @@ footer{
         gap: 0;
     }
 
-    /* tighten every container's internal spacing */
-    .cv-hero-container,
-    .statement-container,
-    .education-container,
-    .work-exp-container {
+    /* ── hero / personal info ── */
+    .cv-hero-container {
         margin: 4px 0;
         padding: 6px;
     }
@@ -541,17 +567,128 @@ footer{
         padding: 6px;
     }
 
-    .personal-text-container {
+    .small-profile-img {
+        width: 100px;
+        height: 70px;
+    }
+
+    .cv-hero-personal-info h2 {
+        font-size: 11pt;
+        padding: 4px;
+    }
+
+    .cv-hero-personal-info p {
+        font-size: 9pt;
+        padding: 2px 4px;
+    }
+
+    .cv-hero-personal-info a {
+        color: #EFC24F !important;
+    }
+
+    /* ── statement + skills side by side ── */
+    .statement-container {
+        margin: 4px 0;
         padding: 6px;
     }
 
-    .personal-text-container p {
-        padding: 4px;
-        font-size: 9pt;
-        line-height: 1.3;
+    .statement-skills-wrapper {
+        display: flex;
+        flex-direction: row;
+        gap: 8px;
+        align-items: stretch;
     }
 
-    /* stack education cards vertically */
+    /* personal statement takes ~45% width */
+    .personal-text-container {
+        flex: 0 0 44%;
+        padding: 6px;
+        box-shadow: 0px;
+    }
+
+    .personal-text-container h2 {
+        font-size: 10pt;
+        padding: 4px 4px 6px 4px;
+    }
+
+    .personal-statement p {
+        font-size: 8pt;
+        line-height: 1.3;
+        padding: 3px 4px;
+        box-shadow: none;
+    }
+
+    /* skills section takes remaining ~55% */
+    .skills-container-cv {
+        flex: 0 0 54%;
+        padding: 4px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .skills-container-cv h2 {
+        font-size: 10pt;
+        padding: 4px;
+        color: #FFFFFF;
+    }
+
+    /* each row of 3 skill cards */
+    .skill-list-cv {
+        display: flex;
+        flex-direction: row;
+        gap: 4px;
+        flex: 1;
+    }
+
+    /* individual skill cards — condensed */
+    .skill {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 4px;
+        margin: 0;
+        border: 3px solid #EFC24F;
+        box-shadow: none;
+        border-radius: 6px;
+    }
+
+    .skill-title {
+        padding: 2px;
+        text-align: center;
+    }
+
+    .skill-title h3 {
+        font-size: 7.5pt;
+        padding: 2px 0;
+    }
+
+    .skill-icon {
+        font-size: 14px !important;
+        padding: 2px 0;
+        margin: 0;
+    }
+
+    .skill-text p {
+        font-size: 7pt;
+        line-height: 1.2;
+        padding: 2px;
+        text-align: center;
+    }
+
+    /* ── education ── */
+    .education-container {
+        margin: 4px 0;
+        padding: 6px;
+        box-shadow: none;
+    }
+
+    .education-container h2 {
+        font-size: 11pt;
+        padding: 4px;
+    }
+
     .education-list {
         flex-direction: column;
         gap: 6px;
@@ -561,13 +698,24 @@ footer{
     .education-description {
         width: 100%;
         padding: 6px;
+        border: 3px solid #EFC24F;
+        box-shadow: none;
     }
 
-    /* condense table cells significantly */
+    .education-description h2 {
+        font-size: 10pt;
+        padding: 4px;
+    }
+
+    .education-description h3 {
+        font-size: 9pt;
+        padding: 2px 4px;
+    }
+
     .grade-table-container th,
     .grade-table-container td {
-        padding: 3px 6px;
-        font-size: 8pt;
+        padding: 3px 5px;
+        font-size: 7.5pt;
     }
 
     .grade-table {
@@ -575,69 +723,71 @@ footer{
     }
 
     .grade-table h3 {
+        font-size: 8.5pt;
         padding: 2px 0;
-        font-size: 9pt;
     }
 
-    /* tighten work experience */
+    /* ── work experience ── */
+    .work-exp-container {
+        margin: 4px 0;
+        padding: 6px;
+    }
+
+    .work-exp-container h2 {
+        font-size: 11pt;
+    }
+
     .work-exp-list {
         gap: 4px;
         padding: 4px;
     }
 
     .work-exp-card {
-        margin: 4px 0;
+        margin: 2px 0;
         padding: 6px;
+        border: 3px solid #EFC24F;
+        box-shadow: none;
     }
 
     .title-content {
-        gap: 10px;
+        gap: 8px;
     }
 
     .role, .company, .duration {
-        padding: 4px;
+        padding: 3px;
     }
 
     .work-exp-card h2 {
         font-size: 10pt;
-        padding: 4px;
+        padding: 3px;
     }
 
     .work-exp-card h4,
     .work-exp-card h5 {
-        font-size: 9pt;
-        padding: 3px;
+        font-size: 8.5pt;
+        padding: 2px 3px;
     }
 
-    /* stack work bullets single column */
     .work-ul {
         flex-direction: column;
-        padding-left: 20px;
+        padding-left: 18px;
     }
 
     .work-ul li {
         width: 100%;
-        padding: 2px 0;
+        padding: 1px 0;
         margin: 1px;
-        font-size: 9pt;
+        font-size: 8.5pt;
+        line-height: 1.3;
     }
 
-    /* avoid splits mid-card */
+    /* ── no page breaks mid-card ── */
     .education-description,
     .work-exp-card,
     .statement-container,
-    .cv-hero-container {
+    .cv-hero-container,
+    .skill {
         page-break-inside: avoid;
         break-inside: avoid;
-    }
-
-    .cv-hero-personal-info a {
-        color: #EFC24F !important;
-    }
-
-    /* small profile image */
-    .small-profile-img {
-        width: 120px;
-        height: 80px;
     }
 }
