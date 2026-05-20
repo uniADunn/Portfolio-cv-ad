@@ -1,0 +1,27 @@
+{
+  "name": "portfolio-cv-ad",
+  "version": "1.0.0",
+  "description": "cv/portfolio website",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "jest": {
+    "testEnvironment": "jsdom"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/uniADunn/Portfolio-cv-ad.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/uniADunn/Portfolio-cv-ad/issues"
+  },
+  "homepage": "https://github.com/uniADunn/Portfolio-cv-ad#readme",
+  "dependencies": {
+    "jest": "^30.4.2",
+    "jest-environment-jsdom": "^30.4.1"
+  }
+}
