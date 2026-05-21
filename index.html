@@ -110,34 +110,48 @@
             </div>                                
         </section>
         
-        <section class="projects-summary">            
+        <section class="projects-summary">
+            <h2>Projects Overview</h2>
             <div class="projects-container">
-                <h2>Projects Overview</h2>
-                
                 <div class="project-list">
                     <div class="project">
-                        <img src="images/profile_img.jpg" alt="Honours Project" class="project-img">
-                        <h2>Honours Project</h2>
+                        <div class="project-img-container">
+                        <img src="images/SensorSetupHP_AD.jpg" alt="Sensor Setup" class="project-img">
+                        <img src="images/WiringSetupPi.jpg" alt="Sensor Setup" class="project-img">
+                    </div>
+                        <h2>Honours Project: Dynamic IoT Solar-Guided Lighting System</h2>
                         <div class="project-overview-text">                            
-                            <p>This was my final year project where I developed an IoT-based dynamic
-                                 lighting control system using historical solar irradiance data.</p>
+                            <p>My honours project involved designing and building a full end-to-end IoT system that uses historical solar data to dynamically control LED lighting for indoor hydroponic growing environments. Rather than using fixed lighting schedules, the system derives hourly spectral energy targets from real NASA solar irradiance data and adjusts lighting output to follow the natural rise and fall of sunlight throughout the day.
+                                The project covered every layer of the pipeline independently — spectral sensing on a Raspberry Pi, secure MQTT communication, MySQL database logging, and simulation-based control logic — and was evaluated against three different actuator models to validate system accuracy. The work laid the technical foundation for future biological plant growth trials comparing dynamic solar-guided lighting against conventional static recipes.</p>
                         </div>
                     </div>
                     <div class="project">
-                        <img src="images/profile_img.jpg" alt="Task Management App" class="project-img">
+                        <div class="project-img-container">
+                            <img src="images/profile_img.jpg" alt="Task Management App" class="project-img">
+                        </div>
                         <h2>Task Management App</h2>
                         <div class="project-overview-text">
                             <p>A web application built with HTML, CSS, and JavaScript to help users
                                  manage their daily tasks and improve productivity.</p>
                         </div>
-                    </div>                    
+                    </div>
                 </div>
             </div>
+            
         </section>        
     </main>
 
     <footer>
         <p>&copy; 2026 Ashley Dunn. All rights reserved.</p>
     </footer>
+             
+            
+                
+                
+                
+                    
+                                        
+                
+            
 </body>
 </html>

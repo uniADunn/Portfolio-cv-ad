@@ -124,6 +124,7 @@ a{
     margin:0px 5px;
 }
 .profile-img{
+    
     width:550px;
     height:350px;
     border-radius: 50px;
@@ -199,52 +200,62 @@ a{
     text-align: center;
 }
 .projects-summary{
-    display :flex;
-    justify-content: space-evenly;
-    padding: 10px;
-    border-radius: 10px;
     background-color: #278099;
-    color: white;
-    margin:10px;
+    padding:10px;
+    margin:10px 10px;
+    border-radius: 10px;
+    color:#FFFFFF;
 }
 .projects-container{
+    background-color: #278099;
     display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    height: 100%;
+    flex-direction: row;
+    flex-wrap: wrap;    
     padding:10px;
-    
     border-radius: 10px;
-    width:100%;
-    margin:10px;
-}
-.projects-container h2{
-    padding:0px 5px;
-    margin:0px 10px;
 }
 .project-list{
-    display:flex;
+    display: flex;
     flex-direction: row;
-    justify-content: space-between;
-    padding: 0px;
+    justify-content: space-evenly;
+    gap: 10px;
+    flex-wrap: wrap;
 }
 .project{
     background-color: #001946;
-    padding: 10px;
+    border:#EFC24F 5px solid;
     border-radius: 10px;
+    padding:10px;
     margin:10px;
-    border: #EFC24F 5px solid;
-    box-shadow: 0px 0px 15px #000000;
-        
+    display:flex;
+    flex-direction: column;
+    width: 45%;
 }
-.project img{
-    width:100%;
+.project-img-container{
+    display: inline-flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding:10px;
+    width: auto;
     height: auto;
+}
+.project-img{
+    display: inline-flex;
+    width: 100%;
+    margin: 10px;
     border-radius: 10px;
+    border: 5px solid #000000;
+    box-shadow: 0px 0px 15px #000000;
+    width: auto;
+    height: 200px;
 }
 .project h2{
     padding:10px 5px;
     margin:0px;
+}
+.project p{
+    padding:10px 5px;
+    line-height: 1.5;
 }
 /* CV page styles */
 .pdf-download-btn{
