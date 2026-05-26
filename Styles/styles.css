@@ -1,11 +1,9 @@
-/* Global styles */
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* body and element styles */
 body{
     background-color: #278099;
     display: flex;
@@ -61,7 +59,7 @@ a{
     color: white;
     text-align: center;
 }
-/*home page styles*/
+
 .main-content{
     background-color: #001946;
     margin:20px 150px;
@@ -257,7 +255,7 @@ a{
     padding:10px 5px;
     line-height: 1.5;
 }
-/* CV page styles */
+
 .pdf-download-btn{
     display:inline-flex;
     background-color: #278099;
@@ -411,6 +409,48 @@ a{
     text-align: left;
     padding:10px;
 }
+
+.projects-container-cv {
+    margin: 20px 0;
+}
+ 
+.projects-container-cv h2 {
+    margin-bottom: 15px;
+}
+ 
+.project-link {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 5px 12px;
+    background-color: #f0c040;
+    color: #0d1f3c;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.85em;
+    transition: background-color 0.2s ease;
+}
+ 
+.project-link:hover {
+    background-color: #e0b030;
+}
+
+.skill {
+    display: flex;
+    flex-direction: column;
+}
+
+.skill-text {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.project-link {
+    margin-top: auto;
+    align-self: center;
+}
+
 .education-container{
     color: #FFFFFF;
     margin: 10px 0px;    
@@ -478,7 +518,7 @@ table{
     
     border-collapse: collapse;
 }
-/* Experience section styles */
+
 .work-exp-section{
     display:flex;
     flex-direction: column;
@@ -525,7 +565,6 @@ table{
     margin-left: auto;
 }
 
-
 .work-exp-card h3, .work-exp-card h4, .work-exp-card h5, .work-exp-card h2,
 .work-exp-card ul li{
     padding: 10px 0px 10px 10px;
@@ -543,7 +582,7 @@ table{
     margin: 5px;
     width: 30%;
 }
-/* Footer styles */
+
 footer{
     background-color: #001946;
     text-align: center;
@@ -552,48 +591,54 @@ footer{
     margin-top: auto;
     border-top: 5px solid #EFC24F;
 }
-/* ── Print / Save as PDF ── */
+
 @page {
     size: A4;
-    margin: 0mm;
+    margin: 10mm 8mm;
 }
 
 @media print {
-    /* ── hide UI chrome ── */
+
     header,
     footer,
-    .pdf-download-btn {
+    .pdf-download-btn,
+    .project-link {
         display: none !important;
     }
 
-    /* ── kill the teal gaps ── */
     body {
+        display: block !important;
+        height: auto !important;
+        min-height: 0 !important;
         background-color: #001946;
         -webkit-print-color-adjust: exact;
         print-color-adjust: exact;
     }
 
-    /* ── main wrapper ── */
     .main-content {
+        display: block !important;
+        height: auto !important;
         margin: 0;
         padding: 2px;
         border-radius: 0;
     }
 
     .cv-hero-section {
+        display: block !important;
+        height: auto !important;
         margin: 0;
         padding: 2px;
-        gap: 0;
     }
 
-    /* ── hero / personal info ── */
     .cv-hero-container {
+        display: flex !important;
+        flex-direction: row !important;
+        align-items: center !important;
+        justify-content: center !important;
         margin: 4px 0;
         padding: 6px;
-    }
-
-    .personal-container {
-        padding: 6px;
+        page-break-after: avoid;
+        break-after: avoid;
     }
 
     .small-profile-img {
@@ -601,17 +646,16 @@ footer{
         height: 70px;
     }
 
-    .cv-hero-personal-info h2 {
-        font-size: 11pt;
-        padding: 4px;
-    }
-
     .cv-hero-personal-info {
         font-size: 9pt;
         padding: 2px 4px;
         border: 2px solid #EFC24F;
         box-shadow: none;
-        
+    }
+
+    .cv-hero-personal-info h2 {
+        font-size: 11pt;
+        padding: 4px;
     }
 
     .cv-hero-personal-info p {
@@ -623,29 +667,28 @@ footer{
         color: #EFC24F !important;
     }
 
-    /* ── statement + skills side by side ── */
     .statement-container {
+        display: block !important;
+        height: auto !important;
         margin: 4px 0;
         padding: 6px;
     }
 
     .statement-skills-wrapper {
-        display: flex;
-        flex-direction: row;
+        display: flex !important;
+        flex-direction: row !important;
         gap: 8px;
         align-items: stretch;
     }
 
-    /* personal statement takes ~45% width */
     .personal-text-container {
         flex: 0 0 44%;
         padding: 6px;
-        box-shadow: 0px;
     }
 
     .personal-text-container h2 {
         font-size: 10pt;
-        padding: 4px 4px 6px 4px;
+        padding: 4px;
     }
 
     .personal-statement p {
@@ -655,12 +698,11 @@ footer{
         box-shadow: none;
     }
 
-    /* skills section takes remaining ~55% */
     .skills-container-cv {
         flex: 0 0 54%;
         padding: 4px;
-        display: flex;
-        flex-direction: column;
+        display: flex !important;
+        flex-direction: column !important;
         justify-content: space-between;
     }
 
@@ -670,25 +712,24 @@ footer{
         color: #FFFFFF;
     }
 
-    /* each row of 3 skill cards */
     .skill-list-cv {
-        display: flex;
-        flex-direction: row;
+        display: flex !important;
+        flex-direction: row !important;
         gap: 4px;
         flex: 1;
     }
 
-    /* individual skill cards — condensed */
     .skill {
         flex: 1;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
+        display: flex !important;
+        flex-direction: column !important;
         padding: 4px;
-        margin: 4px 0px;
+        margin: 4px 0;
         border: 3px solid #EFC24F;
         box-shadow: none;
         border-radius: 6px;
+        page-break-inside: avoid;
+        break-inside: avoid;
     }
 
     .skill-title {
@@ -714,16 +755,34 @@ footer{
         text-align: center;
     }
 
-    /* ── education ── */
-    .education-container {
+    .projects-container-cv {
+        display: block !important;
+        height: auto !important;
         margin: 4px 0;
         padding: 6px;
-        box-shadow: none;
+    }
+
+    .projects-container-cv h2 {
+        font-size: 11pt;
+        padding: 4px;
+        page-break-after: avoid;
+        break-after: avoid;
+    }
+
+    .education-container {
+        display: block !important;
+        height: auto !important;
+        margin: 4px 0;
+        padding: 6px;
+        page-break-inside: avoid;
+        break-inside: avoid;
     }
 
     .education-container h2 {
         font-size: 11pt;
         padding: 4px;
+        page-break-after: avoid;
+        break-after: avoid;
     }
 
     .education-list {
@@ -737,6 +796,8 @@ footer{
         padding: 6px;
         border: 3px solid #EFC24F;
         box-shadow: none;
+        page-break-inside: avoid;
+        break-inside: avoid;
     }
 
     .education-description h2 {
@@ -764,8 +825,9 @@ footer{
         padding: 2px 0;
     }
 
-    /* ── work experience ── */
     .work-exp-container {
+        display: block !important;
+        height: auto !important;
         margin: 4px 0;
         padding: 6px;
     }
@@ -784,6 +846,8 @@ footer{
         padding: 6px;
         border: 3px solid #EFC24F;
         box-shadow: none;
+        page-break-inside: avoid;
+        break-inside: avoid;
     }
 
     .title-content {
@@ -816,15 +880,5 @@ footer{
         margin: 1px;
         font-size: 8.5pt;
         line-height: 1.3;
-    }
-
-    /* ── no page breaks mid-card ── */
-    .education-description,
-    .work-exp-card,
-    .statement-container,
-    .cv-hero-container,
-    .skill {
-        page-break-inside: avoid;
-        break-inside: avoid;
     }
 }
