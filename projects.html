@@ -37,7 +37,7 @@
                 
                 <div class="project-list">
                     <div class="project">
-                        <img src="images/profile_img.jpg" alt="Honours Project" class="project-img">
+                        <img src="images/profile_img.jpg" alt="Honours Project" class="project-img" style="display:none;">
                         <h2>Honours Project</h2>
                        <div class="project-overview-text">
                             <h3>IoT-Based Dynamic Light Controller Guided by Historical Solar Irradiance</h3>
@@ -45,19 +45,7 @@
 
                             <h4>Overview</h4>
                             <p>Indoor hydroponic systems typically use fixed lighting recipes that deliver the right quantity of light but not the natural daily patterns of real sunlight. This project addressed that gap by building and validating an IoT pipeline capable of reproducing historical solar diurnal spectral energy profiles indoors, targeting controlled environment agriculture (CEA) applications.</p>
-
-                            <h4>System Architecture</h4>
-                            <p>The system was designed as a modular IoT pipeline with four distinct layers. The Raspberry Pi 5 acted as the sensing endpoint, reading spectral data from an AS7341 11-channel sensor over I2C and publishing structured JSON payloads to a locally hosted Mosquitto MQTT broker. Communication between the Pi and a Windows laptop was secured through a Netbird encrypted peer-to-peer overlay, removing the need for port forwarding or static IPs. On the laptop side, a Python ingestion service subscribed to MQTT topics, validated incoming payloads, and wrote sensor readings and run metadata into a MySQL database. A scheduler managed run creation, solar target selection, and execution of simulation experiments. The Pi's sensor publishing script was deployed as a systemd service for automatic startup and restart on reboot.</p>
-
-                            <h4>Solar Target Generation</h4>
-                            <p>Hourly spectral energy targets were derived from three data sources. FAOSTAT crop yield data was used to identify high-performing crop-country-year combinations, selecting Belgium 2020 tomato data as the reference dataset. NASA POWER hourly solar irradiance data was retrieved for the country centroid coordinates at hourly resolution. ASTM G173-03 spectral fractions were then applied to split total hourly solar energy into band-level targets across blue (415–480nm), green (515–590nm), and red (630–680nm) wavelength bands.</p>
-
-                            <h4>Control Models</h4>
-                            <p>Three actuator simulation models were implemented and evaluated. The single coupled lamp model controlled all spectral bands with one duty value, meaning the band that reached its target first capped output for all others. The independent open-loop model assigned a separate duty value per band, calculated directly from the ratio of remaining energy to remaining capacity. The independent closed-loop model introduced tolerance-based feedback, adjusting duty values in discrete steps every 5 seconds by comparing predicted end-of-hour delivery against the target within a 5% tolerance band. All models were tested under both unscaled and scaled conditions, with results evaluated using Mean Absolute Error (MAE).</p>
-
-                            <h4>Results</h4>
-                            <p>The single coupled lamp failed under both scaled and unscaled conditions due to architectural coupling — performance did not improve with scaling, confirming the limitation was structural. Under unscaled conditions, the independent models tracked achievable bands accurately but hit hardware saturation on the red band. Under scaled conditions, the open-loop model achieved zero tracking error across all bands, and the closed-loop model maintained MAE within the 5% tolerance threshold across all three bands.</p>
-
+                            
                             <h4>Stack</h4>
                             <p>Python · Mosquitto MQTT · MySQL · Netbird · AS7341 Spectral Sensor · Raspberry Pi 5 · NASA POWER · ASTM G173 · FAOSTAT · Git / GitHub</p>
 
@@ -66,10 +54,25 @@
                         </div>
                     </div>
                     <div class="project">
-                        <img src="images/profile_img.jpg" alt="Task Management App" class="project-img">
+                        <img src="images/profile_img.jpg" alt="Task Management App" class="project-img" style="display:none;">
                         <h2>Task Management App</h2>
                         <div class="project-overview-text">
-                            <p>This project involved developing a task management application to help users organize and prioritize their tasks efficiently.</p>
+                            <h3>Simple Browser-Based Task Manager Built with JavaScript</h3>
+                            <p>Self-Study Personal Project, 2026 </p>
+
+                            <h4>Overview</h4>
+                            <p>Browser-based task managers commonly rely on frameworks and libraries to handle state
+                                and DOM updates. This project was built without any, using vanilla JavaScript structured
+                                across four focused modules to keep concerns cleanly separated and demonstrate core
+                                language fundamentals.</p>
+                            <h4>Stack</h4>
+                            <p>JavaScript · HTML · CSS · Jest · jsdom · Git / GitHub</p>
+
+                            <h4>Outcome</h4>
+                            <p>The app supports creating, updating and deleting tasks with input validation and
+                                dynamic re-rendering on every change. A full unit test suite covers all 
+                                four modules including validation logic, task creation, status updates,
+                                deletion and DOM rendering.</p>
                         </div>
                     </div>                    
                 </div>

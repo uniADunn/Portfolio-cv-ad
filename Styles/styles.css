@@ -46,8 +46,7 @@ nav{
     display:block;
     width: 100%;
     background-color: var(--primary-color);
-    border-radius: 10px;
-    width:100%;
+    border-radius: 10px;    
     align-content: center;
     
 }
@@ -253,7 +252,7 @@ a{
 }
 .project-img{
     display: inline-flex;
-    width: 100%;
+    
     margin: 10px;
     border-radius: 10px;
     border: 5px solid #000000;
