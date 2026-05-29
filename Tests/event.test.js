@@ -4,14 +4,27 @@
 
 beforeEach(() => {
     document.body.innerHTML = `
+        <body>
+    <header>
         <nav>
-            <div class="div-btn-nav"><a href="index.html">HOME</a></div>
-            <div class="div-btn-nav"><a href="cv.html">CV</a></div>
-            <div class="div-btn-nav"><a href="projects.html">PROJECTS</a></div>
+            <ul class="nav-ul">
+                <li class="div-btn-nav">
+                    <a href="index.html">HOME</a>
+                </li>
+                <li class="div-btn-nav">
+                    <a href="cv.html">CV</a>
+                </li>
+                <li class="div-btn-nav">
+                    <a href="projects.html">PROJECTS</a>
+                </li>
+            
+            </ul>
+            
         </nav>
         <div class="pdf-download-btn">
-            <a class="print-btn" href="#">Download CV</a>
+            <a class="print-btn" href="#">Print / Save as PDF</a>
         </div>
+    </header>
     `;
 
     jest.resetModules();

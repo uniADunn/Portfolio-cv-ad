@@ -17,7 +17,7 @@ body{
     background-color: var(--primary-color);
     display: flex;
     flex-direction: column;
-    height: 100vh;
+    min-height: 100vh;
 }
 header{    
     background-color: var(--secondary-color);
@@ -31,10 +31,8 @@ header{
     
     
 }
-nav{
-    margin: 0px 150px;
-    padding: 20px 0px 20px 0px;
-    width:30%;
+nav{    
+    width:40%;
 }
 .nav-ul{
     list-style: none;
@@ -42,8 +40,7 @@ nav{
     justify-content: flex-start;
     flex-direction: row;
     gap: 20px;
-    padding:10px 0px;
-    margin:0px 20px;
+    padding: 10px 0px;
 }
 .div-btn-nav{
     display:block;
@@ -150,7 +147,7 @@ a{
     height: 100%; 
 }
 .skill{
-    display:inline-flex;
+    display:flex;
     flex-direction: column;
     width:30%;
     background-color: var(--secondary-color);
@@ -210,6 +207,9 @@ a{
 .skill-text{
     padding:10px;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
 }
 .projects-summary{
     background-color: var(--secondary-color);
@@ -270,12 +270,10 @@ a{
     line-height: 1.5;
 }
 
-.pdf-download-btn{
-    display:inline-flex;
+.pdf-download-btn{    
     background-color: var(--primary-color);
     border-radius: 10px;
-    padding:10px 20px;
-    margin:10px 150px;
+    
 }
 .pdf-download-btn:hover{
     background-color: var(--accent-color);
@@ -283,6 +281,9 @@ a{
 }
 .pdf-download-btn:hover a{
     color: var(--nav-hover-color);
+    display: block;
+    width: 100%;
+    text-decoration: none;
 }
 .cv-hero-section{
     display :flex;
@@ -404,11 +405,18 @@ a{
     align-self: center;
     border:5px solid var(--accent-color);
     border-radius: 10px;
-    box-shadow: 0px 0px 15px #000000;
+    box-shadow: 0px 0px 0px #000000;
 }
-.cv-hero-personal-info h2, p{
-    padding:10px;
+.cv-hero-personal-info h2, .cv-hero-personal-info p, .cv-hero-personal-info a{
+    text-align: center;    
+    padding:5px;
     color: #FFFFFF;
+}
+.inline-details{    
+    align-items: center;
+    display: inline-flex;
+    flex-direction: row;
+    gap: 10px;
 }
 .cv-education-section{
     display:flex;
@@ -434,7 +442,8 @@ a{
  
 .project-link {
     display: inline-block;
-    margin-top: 10px;
+    margin-top: auto;
+    align-self: center;
     padding: 5px 12px;
     background-color: var(--primary-color);
     color: #FFFFFF;
@@ -451,21 +460,6 @@ a{
     transition: background-color 0.5s ease, color 0.5s ease;
 }
 
-.skill {
-    display: flex;
-    flex-direction: column;
-}
-
-.skill-text {
-    display: flex;
-    flex-direction: column;
-    flex: 1;
-}
-
-.project-link {
-    margin-top: auto;
-    align-self: center;
-}
 
 .education-container{
     color: #FFFFFF;

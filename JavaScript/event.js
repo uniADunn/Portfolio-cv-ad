@@ -1,6 +1,3 @@
-
-
-
 const printBtn = document.querySelector('.pdf-download-btn .print-btn');
 if(printBtn){
     printBtn.addEventListener('click', (event) => {
