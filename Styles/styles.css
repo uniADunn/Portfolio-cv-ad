@@ -3,22 +3,31 @@
     padding: 0;
     box-sizing: border-box;
 }
+:root{
+    --primary-color:#278099;
+    --secondary-color: #001946;
+    --accent-color: #EFC24F;
+    --nav-hover-color: #000000;
+}
+i{
+    --icon-background-color: #FFFFFF;
+}
 
 body{
-    background-color: #278099;
+    background-color: var(--primary-color);
     display: flex;
     flex-direction: column;
     height: 100vh;
 }
 header{    
-    background-color: #001946;
+    background-color: var(--secondary-color);
     position: sticky;
     top: 0;
     display: inline-flex;
         justify-content: space-between;
         align-items: center;
         padding: 10px 150px;
-        border-bottom: 5px solid #EFC24F;
+        border-bottom: 5px solid var(--accent-color);
     
     
 }
@@ -38,18 +47,19 @@ nav{
 }
 .div-btn-nav{
     display:inline-flex;
-    background-color: #278099;
+    background-color: var(--primary-color);
     border-radius: 10px;
     width:100%;
     align-content: center;
     padding:10px 20px;
 }
 .div-btn-nav:hover{
-    background-color: #EFC24F ;
+    background-color: var(--accent-color);
     cursor: pointer;
+    transition: background-color 0.5s ease, color 0.5s ease;
 }
 .div-btn-nav:hover a{
-    color: #000000;
+    color: var(--nav-hover-color);
 }
 a{
     text-decoration: none;
@@ -61,7 +71,7 @@ a{
 }
 
 .main-content{
-    background-color: #001946;
+    background-color: var(--secondary-color);
     margin:20px 150px;
     padding:10px;
     border-radius: 10px;
@@ -71,11 +81,11 @@ a{
     justify-content: space-evenly;
     border-radius:10px;
     padding: 10px;    
-    background-color: #001946;
+    background-color: var(--secondary-color);
     margin: 10px 0px;
 }
 .bio{
-    background-color: #278099;
+    background-color: var(--primary-color);
     display: inline-block;
     width: 50%;
     align-items: center;
@@ -84,7 +94,7 @@ a{
     margin:10px 5px 10px 0px;
 }
 .bio-container{
-    background-color: #278099;
+    background-color: var(--primary-color);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -98,10 +108,10 @@ a{
     text-align: center;
     padding:10px;
     color:#FFFFFF;
-    background-color: #001946;
+    background-color: var(--secondary-color);
     border-radius: 10px;
     margin:10px;
-    border:#EFC24F 5px solid;
+    border: 5px solid var(--accent-color);
 }
 .bio-text p{
     padding:10px;
@@ -112,7 +122,7 @@ a{
     flex-direction: column;
     width: 60%;    
     padding:10px;    
-    background-color: #278099;
+    background-color: var(--primary-color);
     color: white;
     border-radius: 10px;
     margin:10px 0px 10px 5px;
@@ -139,11 +149,11 @@ a{
     display:inline-flex;
     flex-direction: column;
     width:30%;
-    background-color: #001946;
+    background-color: var(--secondary-color);
     padding: 5px;
     margin: 10px;
     border-radius: 10px;
-    border: #EFC24F 5px solid;
+    border: 5px solid var(--accent-color);
     box-shadow: 0px 0px 15px #000000;
 }
 .skill-title{
@@ -157,35 +167,35 @@ a{
     
 }
 .fa-linux{
-    background-color: #FFFFFF;
+    background-color: var(--icon-background-color);;
     color: #000000;
     
 }
 .fa-python{
-    background-color:  #FFFFFF;
+    background-color:  var(--icon-background-color);
     color: #306998;
     
 }
 .fa-database{
-    background-color:  #FFFFFF;
+    background-color:  var(--icon-background-color);
     color: #306998;
    
     
 }
 .fa-microchip{
-    background-color: #FFFFFF;
+    background-color: var(--icon-background-color);
     color: #4db409;
     
     
 }
 .fa-code{
-    background-color:  #FFFFFF;
+    background-color:  var(--icon-background-color);
     color:#e08f1d;
     ;
     
 }
 .fa-git-alt{
-    background-color:  #FFFFFF;
+    background-color:  var(--icon-background-color);
     color: #F1502F;
     
     
@@ -198,14 +208,14 @@ a{
     text-align: center;
 }
 .projects-summary{
-    background-color: #278099;
+    background-color: var(--secondary-color);
     padding:10px;
     margin:10px 10px;
     border-radius: 10px;
     color:#FFFFFF;
 }
 .projects-container{
-    background-color: #278099;
+    background-color: var(--primary-color);
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;    
@@ -220,8 +230,8 @@ a{
     flex-wrap: wrap;
 }
 .project{
-    background-color: #001946;
-    border:#EFC24F 5px solid;
+    background-color: var(--secondary-color);
+    border: 5px solid var(--accent-color);
     border-radius: 10px;
     padding:10px;
     margin:10px;
@@ -258,17 +268,17 @@ a{
 
 .pdf-download-btn{
     display:inline-flex;
-    background-color: #278099;
+    background-color: var(--primary-color);
     border-radius: 10px;
     padding:10px 20px;
     margin:10px 150px;
 }
 .pdf-download-btn:hover{
-    background-color: #EFC24F ;
+    background-color: var(--accent-color);
     cursor: pointer;
 }
 .pdf-download-btn:hover a{
-    color: #000000;
+    color: var(--nav-hover-color);
 }
 .cv-hero-section{
     display :flex;
@@ -276,7 +286,7 @@ a{
     justify-content: space-evenly;
     border-radius:10px;
     padding: 10px;    
-    background-color: #001946;
+    background-color: var(--secondary-color);
     margin: 10px;
 }
 .cv-hero-section h1{
@@ -291,7 +301,7 @@ a{
         
     padding:10px;
         
-    background-color: #278099;
+    background-color: var(--primary-color);
     border-radius: 10px;
     margin:10px 0px;
 }
@@ -301,10 +311,10 @@ a{
     justify-content: space-evenly;
     width: 80%;
     align-items: center;
-    background-color: #001946;
+    background-color: var(--secondary-color);
     padding:10px;
     border-radius: 10px;
-    border: 5px solid #EFC24F;
+    border: 5px solid var(--accent-color);
     ;
 }
 .cv-hero-personal-info{
@@ -317,13 +327,13 @@ a{
     text-decoration: underline;
 }
 .cv-hero-personal-info a:hover{
-    color: #EFC24F;
+    color: var(--accent-color);
 }
 
 .statement-container{
     display: inline-flex;
     flex-direction: column;  
-    background-color: #278099;
+    background-color: var(--primary-color);
     padding:10px;
     border-radius: 10px;
     color:#FFFFFF;
@@ -336,7 +346,7 @@ a{
 .personal-text-container{    
     display: inline-flex;
     flex-direction: column;
-    background-color: #278099;
+    background-color: var(--primary-color);
     padding:10px;
     width:50%;
     height: 100%;
@@ -344,9 +354,9 @@ a{
 .personal-statement{
     padding:10px;
     color:#FFFFFF;
-    background-color: #001946;
+    background-color: var(--secondary-color);
     border-radius: 10px;
-    border: 5px solid #EFC24F;
+    border: 5px solid var(--accent-color);
     box-shadow: 0px 0px 15px #000000;
     line-height: 1.5;
     
@@ -357,7 +367,7 @@ a{
     display:flex;
     flex-direction: column;
     width: 100%;    
-    background-color: #278099;
+    background-color: var(--primary-color);
     color: white;
     border-radius: 10px;
     
@@ -374,7 +384,7 @@ a{
     line-height: 1.5; 
 }
 .fa-android{
-    background-color: #FFFFFF;
+    background-color: var(--icon-background-color);
     color: #3DDC84;
 }
 
@@ -382,13 +392,13 @@ a{
     width:350px;
     height:250px;
     border-radius: 50px;
-    border: 5px solid #278099;
-    box-shadow: 0px 0px 15px #278099;
+    border: 5px solid var(--primary-color);
+    box-shadow: 0px 0px 15px var(--primary-color);
     margin:10px;
 }
 .cv-hero-personal-info{
     align-self: center;
-    border:5px solid #EFC24F;
+    border:5px solid var(--accent-color);
     border-radius: 10px;
     box-shadow: 0px 0px 15px #000000;
 }
@@ -402,7 +412,7 @@ a{
     margin:10px 450px;
     padding:10px;
     border-radius: 10px;
-    background-color: #001946;
+    background-color: var(--secondary-color);
 }
 .cv-education-section h2{
     color: #FFFFFF;
@@ -422,8 +432,8 @@ a{
     display: inline-block;
     margin-top: 10px;
     padding: 5px 12px;
-    background-color: #f0c040;
-    color: #0d1f3c;
+    background-color: var(--primary-color);
+    color: #FFFFFF;
     border-radius: 4px;
     text-decoration: none;
     font-weight: 600;
@@ -432,7 +442,9 @@ a{
 }
  
 .project-link:hover {
-    background-color: #e0b030;
+    background-color: var(--accent-color);
+    color: #000000;
+    transition: background-color 0.5s ease, color 0.5s ease;
 }
 
 .skill {
@@ -455,7 +467,7 @@ a{
     color: #FFFFFF;
     margin: 10px 0px;    
     padding:10px;
-    background-color: #278099;
+    background-color: var(--primary-color);
     border-radius: 10px;
 }
 .education-list{
@@ -468,10 +480,10 @@ a{
 .education-description{
     display: inline-flex;
     flex-direction: column;
-    background-color: #001946;
+    background-color: var(--secondary-color);
     padding: 10px;
     border-radius: 10px;
-    border: 5px solid #EFC24F;
+    border: 5px solid var(--accent-color);
     width: 50%;
     box-shadow: 0px 0px 15px #000000;
     
@@ -484,7 +496,7 @@ a{
 .grade-table-container{
     display: inline-flex;
     
-    background-color: #001946;
+    background-color: var(--secondary-color);
     color: #FFFFFF;
     width: 100%;
     
@@ -498,7 +510,7 @@ a{
     border: 2px solid #FFFFFF;
     padding: 10px;
     text-align: left;
-    background-color: #001946;
+    background-color: var(--secondary-color);
 }
 .grade-table{
     display:flex;
@@ -531,7 +543,7 @@ table{
     display: inline-flex;
     flex-direction: column;
     padding:10px;
-    background-color: #278099;
+    background-color: var(--primary-color);
     border-radius: 10px;
     color: #FFFFFF;
     margin: 10px 0px;
@@ -545,10 +557,10 @@ table{
 .work-exp-card{
     display: inline-flex;
     flex-direction: column;
-    background-color: #001946;
+    background-color: var(--secondary-color);
     padding: 10px;
     border-radius: 10px;
-    border: 5px solid #EFC24F;
+    border: 5px solid var(--accent-color);
     margin:10px 0px;
     box-shadow: 0px 0px 15px #000000;
 }
@@ -584,12 +596,12 @@ table{
 }
 
 footer{
-    background-color: #001946;
+    background-color: var(--secondary-color);
     text-align: center;
     padding: 20px;
     color:#ffffff;
     margin-top: auto;
-    border-top: 5px solid #EFC24F;
+    border-top: 5px solid var(--accent-color);
 }
 
 @page {
@@ -610,7 +622,7 @@ footer{
         display: block !important;
         height: auto !important;
         min-height: 0 !important;
-        background-color: #001946;
+        background-color: var(--secondary-color);
         -webkit-print-color-adjust: exact;
         print-color-adjust: exact;
     }
@@ -649,7 +661,7 @@ footer{
     .cv-hero-personal-info {
         font-size: 9pt;
         padding: 2px 4px;
-        border: 2px solid #EFC24F;
+        border: 2px solid var(--accent-color);
         box-shadow: none;
     }
 
@@ -664,7 +676,7 @@ footer{
     }
 
     .cv-hero-personal-info a {
-        color: #EFC24F !important;
+        color: var(--accent-color) !important;
     }
 
     .statement-container {
@@ -725,7 +737,7 @@ footer{
         flex-direction: column !important;
         padding: 4px;
         margin: 4px 0;
-        border: 3px solid #EFC24F;
+        border: 3px solid var(--accent-color);
         box-shadow: none;
         border-radius: 6px;
         page-break-inside: avoid;
@@ -794,7 +806,7 @@ footer{
     .education-description {
         width: 100%;
         padding: 6px;
-        border: 3px solid #EFC24F;
+        border: 3px solid var(--accent-color);
         box-shadow: none;
         page-break-inside: avoid;
         break-inside: avoid;
@@ -844,7 +856,7 @@ footer{
     .work-exp-card {
         margin: 2px 0;
         padding: 6px;
-        border: 3px solid #EFC24F;
+        border: 3px solid var(--accent-color);
         box-shadow: none;
         page-break-inside: avoid;
         break-inside: avoid;
