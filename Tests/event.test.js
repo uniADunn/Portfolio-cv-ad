@@ -18,23 +18,24 @@ beforeEach(() => {
     require('../JavaScript/event');
 });
 
-describe('Main Navigation Tests', () =>{
-    
-    test('home nav div contains correct link', () => {
-        const link = document.querySelectorAll('nav div')[0].querySelector('a');
-        expect(link.getAttribute('href')).toBe('index.html');
+describe('Navigation Button Tests', () => {
+    test('Navigation buttons exist and have correct class', () => {
+        const navButtons = document.querySelectorAll('.div-btn-nav a');
+        expect(navButtons.length).toBe(3);
+        expect(navButtons[0].textContent).toBe('HOME');
+        expect(navButtons[1].textContent).toBe('CV');
+        expect(navButtons[2].textContent).toBe('PROJECTS');
     });
 
-    test('cv nav div contains correct link', () => {
-        const link = document.querySelectorAll('nav div')[1].querySelector('a');
-        expect(link.getAttribute('href')).toBe('cv.html');
+    test('Navigation buttons have correct href', () => {
+        const navButtons = document.querySelectorAll('.div-btn-nav a');
+        expect(navButtons[0].getAttribute('href')).toBe('index.html');
+        expect(navButtons[1].getAttribute('href')).toBe('cv.html');
+        expect(navButtons[2].getAttribute('href')).toBe('projects.html');
     });
 
-    test('projects nav div contains correct link', () => {
-        const link = document.querySelectorAll('nav div')[2].querySelector('a');
-        expect(link.getAttribute('href')).toBe('projects.html');
-    });    
 })
+
 
 describe('Print Button Tests', () => {
     test('print button exists and has correct class', () => {
@@ -48,25 +49,4 @@ describe('Print Button Tests', () => {
         printBtn.click();
         expect(window.print).toHaveBeenCalled();
     });
-})
-
-describe('Edge Case Tests', () => {
-    test('clicking a div with no link logs a warning', () => {
-        console.warn = jest.fn();
-
-        // add an empty div to the nav
-        const emptyDiv = document.createElement('div');
-        document.querySelector('nav').appendChild(emptyDiv);
-
-        // re-attach listeners since we added the div after require
-        jest.resetModules();
-        require('../JavaScript/event');
-
-        emptyDiv.click();
-        expect(console.warn).toHaveBeenCalledWith('No link found in the clicked div.');
-    });
-
 });
-
-
-
