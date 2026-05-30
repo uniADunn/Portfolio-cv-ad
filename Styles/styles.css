@@ -490,13 +490,9 @@ a{
 
 }
 .grade-table-container{
-    display: inline-flex;
-    
     background-color: var(--secondary-color);
     color: #FFFFFF;
     width: 100%;
-    
-    
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -592,6 +588,24 @@ footer{
     margin-top: auto;
     border-top: 5px solid var(--accent-color);
 }
+.footer-contact{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 50%;
+    margin: 0 auto;
+}
+.footer-contact a{
+    color: #FFFFFF;
+    text-decoration: none;
+    padding: 5px 10px;
+    margin: 0px 10px;
+}
+.footer-contact a:hover{
+    color: var(--accent-color);
+    transition: color 0.5s ease;
+}
+
 
 @page {
     size: A4;
